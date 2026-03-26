@@ -6,13 +6,13 @@
   "sprints": {
     "1": {
       "title": "Product architecture, data model, and repository scaffolding",
-      "status": "planning",
+      "status": "done",
       "epic": 1,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-26",
+      "hours": 7.5
     },
     "2": {
       "title": "SwiftData and JSON storage pipeline for decks, cards, notes, and images",
@@ -163,7 +163,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 3,
-      "completedSprints": 0
+      "completedSprints": 1
     },
     "2": {
       "title": "Local study content and persistence",
