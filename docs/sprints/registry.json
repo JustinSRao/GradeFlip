@@ -1,0 +1,216 @@
+{
+  "counters": {
+    "next_sprint": 16,
+    "next_epic": 7
+  },
+  "sprints": {
+    "1": {
+      "title": "Product architecture, data model, and repository scaffolding",
+      "status": "planning",
+      "epic": 1,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "2": {
+      "title": "SwiftData and JSON storage pipeline for decks, cards, notes, and images",
+      "status": "planning",
+      "epic": 1,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "3": {
+      "title": "StoreKit purchase model, app modes, and feature gating foundation",
+      "status": "planning",
+      "epic": 1,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "4": {
+      "title": "Deck, flashcard, and deck editing flows",
+      "status": "planning",
+      "epic": 2,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "5": {
+      "title": "Notepad system with lined paper styling and per-card notes",
+      "status": "planning",
+      "epic": 2,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "6": {
+      "title": "Image import, auto-rename, preview, and delete safeguards",
+      "status": "planning",
+      "epic": 2,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "7": {
+      "title": "iPhone study UI with realistic flashcard flip interaction",
+      "status": "planning",
+      "epic": 3,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "8": {
+      "title": "iPad adaptive workspace and multi-pane study flows",
+      "status": "planning",
+      "epic": 3,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "9": {
+      "title": "Mac app layout, themes, dark mode, and accessibility polish",
+      "status": "planning",
+      "epic": 3,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "10": {
+      "title": "Online accounts, auth, and cloud sync backend",
+      "status": "planning",
+      "epic": 4,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "11": {
+      "title": "Study buddies, messaging, deck sharing, requests, and likes",
+      "status": "planning",
+      "epic": 4,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "12": {
+      "title": "Subscription online features and friend study streaks",
+      "status": "planning",
+      "epic": 4,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "13": {
+      "title": "Multi-provider AI abstraction with deck-grounded chat",
+      "status": "planning",
+      "epic": 5,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "14": {
+      "title": "Web-enabled AI chat, study tokens, gifting, and usage metering",
+      "status": "planning",
+      "epic": 5,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    },
+    "15": {
+      "title": "End-to-end QA, analytics, privacy, and App Store launch assets",
+      "status": "planning",
+      "epic": 6,
+      "type": "fullstack",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "hours": null
+    }
+  },
+  "epics": {
+    "1": {
+      "title": "Foundation and Apple architecture",
+      "status": "planning",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "totalSprints": 3,
+      "completedSprints": 0
+    },
+    "2": {
+      "title": "Local study content and persistence",
+      "status": "planning",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "totalSprints": 3,
+      "completedSprints": 0
+    },
+    "3": {
+      "title": "Adaptive study experience and polish",
+      "status": "planning",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "totalSprints": 3,
+      "completedSprints": 0
+    },
+    "4": {
+      "title": "Online sync and social study",
+      "status": "planning",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "totalSprints": 3,
+      "completedSprints": 0
+    },
+    "5": {
+      "title": "AI tutor and token economy",
+      "status": "planning",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "totalSprints": 2,
+      "completedSprints": 0
+    },
+    "6": {
+      "title": "Launch, billing, and App Store readiness",
+      "status": "planning",
+      "created": "2026-03-26",
+      "started": null,
+      "completed": null,
+      "totalSprints": 1,
+      "completedSprints": 0
+    }
+  },
+  "nextEpicNumber": 7,
+  "nextSprintNumber": 16
+}

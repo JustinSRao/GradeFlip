@@ -1,0 +1,7 @@
+# Sprint workflow state files
+.codex/sprint-*-state.json
+.codex/product-state.json
+.build/
+
+# Cheat sheet for Justin Rao
+CODEX-CHEAT-SHEET.md
