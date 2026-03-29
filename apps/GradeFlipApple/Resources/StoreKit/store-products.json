@@ -1,0 +1,26 @@
+{
+  "paidCoreUnlock": {
+    "id": "com.gradeflip.app.core",
+    "kind": "paidCoreUnlock",
+    "displayName": "GradeFlip Core Unlock"
+  },
+  "onlineSubscriptionMonthly": {
+    "id": "com.gradeflip.subscription.online.monthly",
+    "kind": "onlineSubscription",
+    "displayName": "GradeFlip Online Monthly"
+  },
+  "aiTokenPacks": [
+    {
+      "id": "com.gradeflip.tokens.study.25",
+      "kind": "aiTokenPack",
+      "displayName": "25 Study Tokens",
+      "tokenAmount": 25
+    },
+    {
+      "id": "com.gradeflip.tokens.study.100",
+      "kind": "aiTokenPack",
+      "displayName": "100 Study Tokens",
+      "tokenAmount": 100
+    }
+  ]
+}

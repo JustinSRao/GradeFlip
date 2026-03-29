@@ -26,13 +26,13 @@
     },
     "3": {
       "title": "StoreKit purchase model, app modes, and feature gating foundation",
-      "status": "planning",
+      "status": "done",
       "epic": 1,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.1
     },
     "4": {
       "title": "Deck, flashcard, and deck editing flows",
@@ -163,7 +163,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 3,
-      "completedSprints": 2
+      "completedSprints": 3
     },
     "2": {
       "title": "Local study content and persistence",

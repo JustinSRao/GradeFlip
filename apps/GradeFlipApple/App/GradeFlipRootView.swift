@@ -20,6 +20,13 @@ struct GradeFlipRootView: View {
                     Text("SwiftData index preferred: \(appEnvironment.storageConfiguration.prefersSwiftDataIndex ? "yes" : "no")")
                 }
 
+                Section("Sprint 3 Billing") {
+                    Text("App mode: \(appEnvironment.previewEntitlements.appMode().rawValue)")
+                    Text("Core product: \(appEnvironment.billingCatalog.paidCoreUnlock.id)")
+                    Text("Subscription: \(appEnvironment.billingCatalog.onlineSubscriptionMonthly.id)")
+                    Text("Token packs: \(appEnvironment.billingCatalog.aiTokenPacks.map(\.displayName).joined(separator: ", "))")
+                }
+
                 Section("Platforms") {
                     Text("iPhone")
                     Text("iPad")

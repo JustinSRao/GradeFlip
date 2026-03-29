@@ -1,0 +1,12 @@
+{
+  "sprint_number": 2,
+  "sprint_file": "docs\\sprints\\2-in-progress\\epic-01_foundation-and-apple-architecture\\sprint-02_storage-pipeline\\sprint-02_storage-pipeline.md",
+  "sprint_title": "SwiftData and JSON storage pipeline for decks, cards, notes, and images",
+  "status": "complete",
+  "current_phase": 1,
+  "current_step": "1.1",
+  "started_at": "2026-03-29T15:04:37Z",
+  "workflow_version": "3.0",
+  "completed_steps": [],
+  "completed_at": "2026-03-29T15:09:12.244327-07:00"
+}
