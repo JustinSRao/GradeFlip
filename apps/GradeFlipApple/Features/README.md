@@ -9,3 +9,4 @@ Rule:
 Current feature slices:
 
 - `DeckManagement/` for Sprint 4 local deck and flashcard CRUD scaffolding
+- `DeckManagement/DeckNotesFeatureView.swift` for Sprint 5 per-card note editing and lined-paper presentation

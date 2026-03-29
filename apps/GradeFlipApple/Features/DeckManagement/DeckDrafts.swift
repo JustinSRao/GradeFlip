@@ -32,10 +32,12 @@ struct CardDraft: Identifiable, Hashable {
     let id: UUID
     var frontText: String
     var backText: String
+    var noteText: String
 
-    init(id: UUID = UUID(), frontText: String, backText: String) {
+    init(id: UUID = UUID(), frontText: String, backText: String, noteText: String = "") {
         self.id = id
         self.frontText = frontText
         self.backText = backText
+        self.noteText = noteText
     }
 }

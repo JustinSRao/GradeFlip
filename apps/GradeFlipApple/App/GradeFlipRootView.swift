@@ -34,6 +34,11 @@ struct GradeFlipRootView: View {
                     Text("Delete actions stay behind explicit confirmation")
                     Text("Deck titles are editable without changing stable card ownership")
                 }
+
+                Section("Sprint 5 Notes") {
+                    Text("Per-card notes stay deck-scoped and card-linked")
+                    Text("Lined-paper editing and dictation scaffold are now reachable from card flows")
+                }
             }
             .navigationTitle("GradeFlip")
         }

@@ -30,6 +30,12 @@ struct DeckEditorFeatureView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         TextField("Front text", text: $card.frontText)
                         TextField("Back text", text: $card.backText)
+                        NavigationLink("Open Notes") {
+                            DeckNotesFeatureView(card: $card)
+                        }
+                        Text(card.noteText.isEmpty ? "No note yet" : "Note ready")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
                         Button("Delete Card", role: .destructive) {
                             pendingCardDeletion = card
                         }

@@ -126,4 +126,44 @@ public final class LocalDeckLibrary: Sendable {
         try store.save(snapshot: snapshot)
         return snapshot
     }
+
+    public func note(
+        for flashcardID: FlashcardID,
+        in deckID: DeckID
+    ) throws -> CardNote? {
+        let snapshot = try store.load(deckID: deckID)
+        return snapshot.notes.notes.first { $0.flashcardID == flashcardID }
+    }
+
+    @discardableResult
+    public func upsertNote(
+        deckID: DeckID,
+        flashcardID: FlashcardID,
+        plainTextContent: String
+    ) throws -> LocalDeckSnapshot {
+        var snapshot = try store.load(deckID: deckID)
+        guard snapshot.contents.cards.contains(where: { $0.id == flashcardID }) else {
+            throw LocalDeckLibraryError.missingFlashcard(flashcardID)
+        }
+
+        if let noteIndex = snapshot.notes.notes.firstIndex(where: { $0.flashcardID == flashcardID }) {
+            snapshot.notes.notes[noteIndex].plainTextContent = plainTextContent
+        } else {
+            let note = CardNote(
+                deckID: deckID,
+                flashcardID: flashcardID,
+                plainTextContent: plainTextContent
+            )
+            if let cardIndex = snapshot.contents.cards.firstIndex(where: { $0.id == flashcardID }) {
+                snapshot.contents.cards[cardIndex].noteID = note.id
+            }
+            snapshot.notes.notes.append(note)
+        }
+
+        snapshot.contents.deck.updatedAt = .now
+        snapshot.contents.savedAt = .now
+        snapshot.notes.savedAt = .now
+        try store.save(snapshot: snapshot)
+        return snapshot
+    }
 }
