@@ -27,10 +27,12 @@ struct GradeFlipRootView: View {
                     Text("Token packs: \(appEnvironment.billingCatalog.aiTokenPacks.map(\.displayName).joined(separator: ", "))")
                 }
 
-                Section("Platforms") {
-                    Text("iPhone")
-                    Text("iPad")
-                    Text("Mac")
+                Section("Sprint 4 CRUD") {
+                    NavigationLink("Open Deck Management Preview") {
+                        DeckManagementFeatureView()
+                    }
+                    Text("Delete actions stay behind explicit confirmation")
+                    Text("Deck titles are editable without changing stable card ownership")
                 }
             }
             .navigationTitle("GradeFlip")
