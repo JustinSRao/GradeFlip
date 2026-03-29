@@ -44,6 +44,7 @@ The iPad version should justify itself with a materially better workspace for br
 - [ ] Support image preview and note viewing without collapsing the entire workspace
 - [ ] Preserve the flashcard study interaction while adapting it to the tablet context
 - [ ] Support keyboard and pointer usage where it improves the experience
+- [ ] Extend the existing app shell with a real iPad workspace rather than a design-only branch
 
 ### Non-Functional Requirements
 
@@ -91,6 +92,7 @@ Use adaptive SwiftUI containers suited for split or multi-column layouts so the 
 - [ ] Implement the iPad deck and card workspace
 - [ ] Implement note/detail coexistence patterns for iPad
 - [ ] Adapt the card interaction model to the larger layout
+- [ ] Wire the iPad workspace into the shared app shell and platform adaptation layer
 
 ### Phase 3: Validation
 
@@ -109,6 +111,7 @@ Use adaptive SwiftUI containers suited for split or multi-column layouts so the 
 - [ ] The card interaction model works cleanly in the tablet layout
 - [ ] The iPad experience materially improves productivity over the phone flow
 - [ ] Sprint 9 can extend the desktop-class design language from this foundation
+- [ ] The app remains runnable with intentional iPad adaptation after this sprint
 
 ## Notes
 

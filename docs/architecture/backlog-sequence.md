@@ -4,6 +4,11 @@
 
 The backlog is ordered to establish foundations before user-facing polish and monetized extensions.
 
+Two planning rules apply across the entire sequence:
+
+1. Every sprint must advance the real app scaffold, not only the underlying modules or docs.
+2. Sprint 15 is the endpoint for release readiness, so earlier sprints should avoid deferring essential integration, security, and validation work unnecessarily.
+
 ## Sequence
 
 ### Epic 1: Foundation and Apple architecture
@@ -11,32 +16,32 @@ The backlog is ordered to establish foundations before user-facing polish and mo
 1. Sprint 1
    Define architecture, domain boundaries, and repo/module structure.
 2. Sprint 2
-   Implement the local storage contract.
+   Implement the local storage contract and app-facing persistence integration scaffold.
 3. Sprint 3
-   Implement monetization and feature-gating foundations.
+   Implement monetization and feature-gating foundations plus StoreKit-facing app scaffolding.
 
 ### Epic 2: Local study content and persistence
 
 4. Sprint 4
-   Build deck and flashcard CRUD.
+   Build deck and flashcard CRUD with app navigation and editing surfaces.
 5. Sprint 5
-   Build per-card notepads and dictation.
+   Build per-card notepads and dictation with integrated note UI surfaces.
 6. Sprint 6
-   Build image import and image handling.
+   Build image import and image handling with app-level preview and removal flows.
 
 ### Epic 3: Adaptive study experience and polish
 
 7. Sprint 7
-   Build the phone-first study experience.
+   Build the phone-first study experience as a usable app slice.
 8. Sprint 8
-   Build the iPad workspace.
+   Build the iPad workspace as a real platform-adaptive extension of the app shell.
 9. Sprint 9
-   Build the Mac layout and theme system.
+   Build the Mac layout and theme system with accessibility and desktop validation.
 
 ### Epic 4: Online sync and social study
 
 10. Sprint 10
-    Build auth and online sync.
+    Build auth and online sync with a revisitable backend decision finalized at implementation start.
 11. Sprint 11
     Build study buddies, messaging, sharing, requests, and likes.
 12. Sprint 12
@@ -52,7 +57,7 @@ The backlog is ordered to establish foundations before user-facing polish and mo
 ### Epic 6: Launch, billing, and App Store readiness
 
 15. Sprint 15
-    Run end-to-end QA, analytics, privacy, and launch preparation.
+    Run end-to-end QA, analytics, privacy, submission preparation, and release signoff.
 
 ## Dependency Highlights
 

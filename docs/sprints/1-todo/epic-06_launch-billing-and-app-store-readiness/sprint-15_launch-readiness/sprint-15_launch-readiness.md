@@ -45,6 +45,7 @@ Even a well-built app fails at launch if billing language, privacy posture, anal
 - [ ] Prepare App Store listing assets, screenshots, and product messaging
 - [ ] Prepare privacy disclosures and permission copy for note dictation, cloud sync, messaging, and AI usage
 - [ ] Ensure product messaging is consistent about the $5 app purchase, optional monthly subscription, and study tokens
+- [ ] Validate that the assembled app is buildable and releasable on Apple tooling rather than only conceptually complete
 
 ### Non-Functional Requirements
 
@@ -93,6 +94,7 @@ Use a launch-readiness checklist that traces through offline content, online fea
 - [ ] Run the end-to-end validation pass across the major product flows
 - [ ] Implement or finalize analytics instrumentation
 - [ ] Produce launch assets, privacy copy, and store messaging
+- [ ] Finalize Apple-platform release build, signing, and submission-readiness checks
 
 ### Phase 3: Validation
 
@@ -111,6 +113,7 @@ Use a launch-readiness checklist that traces through offline content, online fea
 - [ ] Analytics and privacy materials exist for the core monetization and study flows
 - [ ] App Store materials reflect the real product structure
 - [ ] GradeFlip is prepared for TestFlight and App Store submission
+- [ ] GradeFlip is release-ready rather than awaiting first-time assembly work
 
 ## Notes
 

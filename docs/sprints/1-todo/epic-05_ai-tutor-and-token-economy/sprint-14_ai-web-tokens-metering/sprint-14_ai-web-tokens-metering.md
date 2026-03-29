@@ -47,6 +47,7 @@ The AI assistant is part of both the offline and online GradeFlip experience, bu
 - [ ] The system can support provider-specific pricing differences for ChatGPT, Claude, Gemini, Grok, and DeepSeek
 - [ ] Users can see a pre-send estimate such as "about X study tokens" before submitting a request
 - [ ] The system records token debits, credits, gifts, and reconciliations in an auditable ledger
+- [ ] The app scaffold gains usable token-balance, estimate, and web-AI surfaces during the sprint
 
 ### Non-Functional Requirements
 
@@ -99,6 +100,7 @@ When the provider returns, read actual usage from the provider response, compute
 - [ ] Implement token ledger entries for purchase, spend, gift, refund, and reconciliation
 - [ ] Implement pre-send estimate responses for the client
 - [ ] Implement post-response reconciliation against actual provider usage
+- [ ] Integrate web-enabled AI and token surfaces into the app shell
 
 ### Phase 3: Validation
 
@@ -117,6 +119,7 @@ When the provider returns, read actual usage from the provider response, compute
 - [ ] Actual provider usage reconciles correctly into the token ledger
 - [ ] Token gifts appear as ledger-backed events suitable for the messaging tab
 - [ ] Pricing configuration can vary by provider and model without client-side logic changes
+- [ ] The app exposes a usable tokenized AI flow ahead of launch sprint hardening
 
 ## Notes
 

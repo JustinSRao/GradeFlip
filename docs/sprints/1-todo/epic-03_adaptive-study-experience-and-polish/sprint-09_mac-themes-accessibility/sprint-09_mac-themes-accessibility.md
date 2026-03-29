@@ -44,6 +44,7 @@ The Mac app should not feel like an oversized tablet shell. You also requested b
 - [ ] Support desktop-friendly navigation, selection behavior, and keyboard shortcuts where appropriate
 - [ ] Preserve note, image, and study interactions in the Mac layout
 - [ ] Include accessibility improvements appropriate for larger displays and desktop interaction models
+- [ ] Deliver a real Mac app shell suitable for later release validation
 
 ### Non-Functional Requirements
 
@@ -91,6 +92,7 @@ Use a Mac-appropriate window and navigation structure that favors density, keybo
 - [ ] Implement the Mac layout and desktop navigation patterns
 - [ ] Implement dark/light support and user-selectable themes
 - [ ] Implement accessibility and keyboard refinements
+- [ ] Wire the Mac presentation into the shared app shell with desktop-first behaviors
 
 ### Phase 3: Validation
 
@@ -109,6 +111,7 @@ Use a Mac-appropriate window and navigation structure that favors density, keybo
 - [ ] Core study, note, and image flows work cleanly on Mac
 - [ ] Accessibility and keyboard behavior have been explicitly considered
 - [ ] The app has distinct UI treatments for phone, iPad, and Mac
+- [ ] The Mac build surface is ready for platform QA rather than deferred scaffolding
 
 ## Notes
 

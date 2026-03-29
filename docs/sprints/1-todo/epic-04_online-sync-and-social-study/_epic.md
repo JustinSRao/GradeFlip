@@ -19,6 +19,7 @@ Add the subscription-backed online layer that turns GradeFlip from a solo offlin
 - [ ] The subscription-only online tier is clearly separated from the paid offline core app
 - [ ] Users can become study buddies through friend requests and acceptance flows
 - [ ] Messaging supports deck sharing, deck requests, gifts, and social notifications
+- [ ] Online work is integrated into the app shell as it lands instead of deferred behind service-only code
 - [ ] Social activity such as likes and friend streaks is stored safely in the online backend
 
 ## Sprints

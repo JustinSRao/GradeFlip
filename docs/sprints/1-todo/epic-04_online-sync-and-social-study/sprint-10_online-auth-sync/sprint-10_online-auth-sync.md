@@ -45,6 +45,8 @@ The offline app is the base product, but the online subscription needs a robust 
 - [ ] Support cloud storage for online deck data and related assets
 - [ ] Define conflict-handling rules for edits made across devices
 - [ ] Define server-side access rules so users only access their own protected content by default
+- [ ] Finalize whether `Supabase + PostgreSQL` remains the backend choice before implementation begins
+- [ ] Scaffold app-facing auth and sync entry points during the sprint
 
 ### Non-Functional Requirements
 
@@ -57,7 +59,7 @@ The offline app is the base product, but the online subscription needs a robust 
 ## Dependencies
 
 - **Sprints**: 1, 2, 3, 4, 5, 6
-- **External**: Supabase/PostgreSQL setup, storage bucket configuration, authentication provider configuration
+- **External**: Current plan assumes `Supabase + PostgreSQL`, but backend selection remains revisitable until Sprint 10 starts
 
 ## Scope
 
@@ -78,7 +80,7 @@ The offline app is the base product, but the online subscription needs a robust 
 
 ## Technical Approach
 
-Use Supabase with PostgreSQL, authentication, storage, and row-level security as the online platform. Map local deck/card/note/image IDs into server-side records so the same stable identifiers can support sync, sharing, and AI deck selection later. Keep offline JSON storage as the local source that sync jobs reconcile with server records instead of replacing the offline model outright.
+Unless a documented decision changes beforehand, use `Supabase + PostgreSQL`, authentication, storage, and row-level security as the online platform. Map local deck/card/note/image IDs into server-side records so the same stable identifiers can support sync, sharing, and AI deck selection later. Keep offline JSON storage as the local source that sync jobs reconcile with server records instead of replacing the offline model outright.
 
 ## Tasks
 
@@ -87,12 +89,14 @@ Use Supabase with PostgreSQL, authentication, storage, and row-level security as
 - [ ] Define the relational schema for users and synced study content
 - [ ] Define sync directions, triggers, and conflict rules
 - [ ] Define account and session flows for the client
+- [ ] Confirm and document the final backend choice at sprint start
 
 ### Phase 2: Implementation
 
 - [ ] Implement auth scaffolding and protected user sessions
 - [ ] Implement cloud schema and storage structure for synced content
 - [ ] Implement the first-pass local-to-cloud sync pipeline
+- [ ] Integrate account and sync surfaces into the app shell
 
 ### Phase 3: Validation
 
@@ -111,6 +115,7 @@ Use Supabase with PostgreSQL, authentication, storage, and row-level security as
 - [ ] Core study content can be represented in the online data model
 - [ ] The sync design respects the offline-first app model
 - [ ] Sprint 11 can build social features without redefining the backend foundation
+- [ ] The app has a usable authenticated online entry path after this sprint
 
 ## Notes
 

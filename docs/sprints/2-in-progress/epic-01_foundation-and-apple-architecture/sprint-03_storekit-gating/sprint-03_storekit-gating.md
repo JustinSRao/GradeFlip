@@ -28,7 +28,7 @@ workflow_version: "3.1.0"
 
 ## Goal
 
-Define and implement the product-access model for the paid app, optional online subscription, and AI token purchases so GradeFlip's feature boundaries are enforceable from the start.
+Define and implement the product-access model for the paid app, optional online subscription, and AI token purchases so GradeFlip's feature boundaries are enforceable from the start and integrated into the app scaffold.
 
 ## Background
 
@@ -45,6 +45,7 @@ GradeFlip is not a simple free app. The core app is a one-time paid purchase, th
 - [ ] Define how online mode is presented when the user has a paid app purchase but no subscription
 - [ ] Define how the client checks entitlements and hides or locks gated features
 - [ ] Define placeholder product IDs and StoreKit configuration strategy for app, subscription, and tokens
+- [ ] Scaffold app-facing billing and entitlement presentation flows as part of the sprint
 
 ### Non-Functional Requirements
 
@@ -95,6 +96,7 @@ Keep product identifiers and price presentation configurable. Plan for StoreKit 
 - [ ] Implement or scaffold the feature-gating layer
 - [ ] Implement or scaffold StoreKit product configuration support
 - [ ] Wire the app-mode model so later sprints can target the right capability checks
+- [ ] Scaffold paywall, entitlement, and locked-feature presentation entry points in the app shell
 
 ### Phase 3: Validation
 
@@ -111,6 +113,7 @@ Keep product identifiers and price presentation configurable. Plan for StoreKit 
 - [ ] A capability-based gating model exists for the app
 - [ ] Offline core features are separated cleanly from subscription-only online features
 - [ ] Token purchases are defined separately from monthly billing
+- [ ] The app scaffold exposes the capability model in a way later sprints can reuse directly
 - [ ] Later sprints can implement gated features without re-litigating the business model
 
 ## Notes

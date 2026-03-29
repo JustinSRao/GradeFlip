@@ -35,8 +35,10 @@ The app should share domain, persistence, sync, and AI orchestration logic, but 
 - Offline-first for the paid core app
 - Stable identifiers for decks, cards, notes, images, users, and transactions
 - Clear separation between local-only and cloud-backed data
+- Progressive app scaffolding in every sprint so the repository stays close to a shippable app
 - Capability-based gating for monetization
 - Provider-agnostic AI orchestration
+- Early data protection for on-device study content
 - App Store-realistic privacy and billing behavior
 
 ## Recommended Tech Stack
@@ -48,10 +50,11 @@ The app should share domain, persistence, sync, and AI orchestration logic, but 
 - SwiftData only where it helps local indexing, caching, or UI queries
 - Local JSON files as the canonical deck and note storage format
 - FileManager-backed deck/image storage
+- Apple data-protection hooks and atomic file replacement for local content safety
 
 ### Online Backend
 
-Use `Supabase + PostgreSQL` instead of MongoDB.
+Use `Supabase + PostgreSQL` as the current recommended online stack, but keep the backend decision revisitable until the online sprint begins.
 
 Reasoning:
 
@@ -76,6 +79,8 @@ Reasoning:
 
 MongoDB would make some document storage easy, but it is a worse fit for the social, billing, and ledger-heavy part of the product.
 
+This remains a recommendation, not an irreversible commitment. If the backend choice changes before implementation, the sprint specs and project docs must be updated together.
+
 ## Local Data Boundary
 
 Local mode is the default operating model for the paid core app.
@@ -91,6 +96,8 @@ Local data includes:
 - local study state
 
 The app must remain useful with no account and no network connection.
+
+Local content should also be protected as early as practical through file-protection settings, atomic writes, and storage abstractions that can later support stronger encryption without a format rewrite.
 
 ## Cloud Data Boundary
 
@@ -127,6 +134,24 @@ The AI orchestration layer must be provider-agnostic and support:
 - DeepSeek
 
 Usage pricing must be estimated through deterministic computation, not by making another model call.
+
+## Delivery Rule
+
+Each sprint must leave behind real app-facing scaffolding in addition to lower-level implementation work. Foundation work should not stop at isolated packages or docs if a corresponding app shell, integration point, or placeholder surface can be created safely during the sprint.
+
+By the end of Sprint 15, GradeFlip should be release-ready for Apple-platform shipping, not merely architecturally complete.
+
+## Development and Test Environment
+
+Windows is an acceptable authoring environment for planning, scripts, backend work, and shared package code, but it is not sufficient for final Apple runtime validation.
+
+The project should assume:
+
+- Windows may be used for repo work and partial validation
+- macOS is required for simulator testing, Xcode builds, StoreKit validation, and release preparation
+- Apple device emulation on Windows is not a reliable release path
+
+See `docs/architecture/development-and-testing-environments.md` for the operating model.
 
 ## Repository Structure
 
@@ -249,3 +274,4 @@ These remain intentionally unresolved after Sprint 1:
 - exact App Store product identifiers
 - exact sync conflict-resolution policy details
 - exact AI provider rollout order
+- final online backend choice, though `Supabase + PostgreSQL` is the current recommendation

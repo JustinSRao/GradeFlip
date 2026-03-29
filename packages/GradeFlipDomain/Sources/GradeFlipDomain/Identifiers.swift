@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol GradeFlipIdentifier: RawRepresentable, Hashable, Sendable where RawValue == String {
+public protocol GradeFlipIdentifier: RawRepresentable, Hashable, Codable, Sendable where RawValue == String {
     init()
 }
 

@@ -46,6 +46,7 @@ The online value of GradeFlip depends on social usefulness, not just cloud backu
 - [ ] Users can like other users' decks
 - [ ] The system records who sent, received, accepted, liked, or shared content
 - [ ] Shared deck access respects ownership and permissions
+- [ ] The app scaffold gains navigable social and messaging surfaces during the sprint
 
 ### Non-Functional Requirements
 
@@ -94,6 +95,7 @@ Build a study-buddy relationship layer on top of the authenticated online backen
 - [ ] Implement friend request and study buddy flows
 - [ ] Implement messaging-tab storage and retrieval for social events
 - [ ] Implement deck sharing, requests, and likes
+- [ ] Integrate the social flows into the app shell
 
 ### Phase 3: Validation
 
@@ -112,6 +114,7 @@ Build a study-buddy relationship layer on top of the authenticated online backen
 - [ ] Likes are tracked against shared deck content
 - [ ] The messaging tab can display the core social event types
 - [ ] Sprint 12 and Sprint 14 can build on the same social event model
+- [ ] The social slice is reachable from the app without later assembly work
 
 ## Notes
 

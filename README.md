@@ -1,6 +1,6 @@
 # GradeFlip
 
-GradeFlip is a native Apple study app for iPhone, iPad, and Mac. The core product is intended to ship as a $5 paid App Store app with offline deck creation, flashcards, per-card notepads, local JSON storage, and image attachments. An optional subscription-backed online layer adds study buddies, sharing, messaging, likes, cloud sync, and friend streaks. AI study assistance is available through purchasable study tokens.
+GradeFlip is a native Apple study app for iPhone, iPad, and Mac. The core product is intended to ship as a $5 paid App Store app with offline deck creation, flashcards, per-card notepads, protected local JSON storage, and image attachments. An optional subscription-backed online layer adds study buddies, sharing, messaging, likes, cloud sync, and friend streaks. AI study assistance is available through purchasable study tokens.
 
 ## Product Shape
 
@@ -15,6 +15,7 @@ GradeFlip is a native Apple study app for iPhone, iPad, and Mac. The core produc
 - `docs/architecture/system-architecture.md`
 - `docs/architecture/domain-model.md`
 - `docs/architecture/backlog-sequence.md`
+- `docs/architecture/development-and-testing-environments.md`
 
 ## Planned Module Layout
 
@@ -61,6 +62,18 @@ GradeFlip is a native Apple study app for iPhone, iPad, and Mac. The core produc
 - Sprint 15: End-to-end QA, analytics, privacy, and App Store launch assets
 
 ## Working the Backlog
+
+Planning rule for every sprint:
+
+- Each sprint must leave the repo in a more app-shaped state than before it started.
+- Scaffolding is not deferred to the end. If a sprint introduces storage, billing, sync, AI, or UI behavior, it should also wire the relevant app-facing integration surface needed to exercise that behavior later.
+- By the end of Sprint 15, the repository should be in a release-ready state for Apple-platform shipping rather than a collection of isolated modules.
+
+## Windows Development Note
+
+- Windows is a valid development environment for planning, docs, backend work, and shared Swift package code.
+- Native iPhone, iPad, and macOS app execution still requires macOS. Apple simulators do not run natively on Windows, so final app verification needs a Mac, a remote macOS machine, or macOS CI.
+- Windows-side testing remains useful for repo workflows and shared logic, but it is not a substitute for Apple-platform runtime validation.
 
 Run commands from the project root:
 

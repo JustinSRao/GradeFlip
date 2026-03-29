@@ -45,6 +45,7 @@ Notes are central to the app concept, not a side feature. Each flashcard should 
 - [ ] The app supports speech-to-text note entry on supported Apple platforms
 - [ ] The note system can support deck-scoped note data keyed to stable card IDs
 - [ ] The note editor can be embedded later into phone, tablet, and Mac-specific layouts
+- [ ] The app scaffold gains a reachable note-editing surface during this sprint
 
 ### Non-Functional Requirements
 
@@ -92,6 +93,7 @@ Represent note content as deck-scoped data keyed by stable card identifiers. Kee
 - [ ] Implement per-card note retrieval and save flows
 - [ ] Implement the lined-paper note editor presentation
 - [ ] Implement speech-to-text entry support for notes
+- [ ] Integrate the note editor into the app shell for deck/card flows
 
 ### Phase 3: Validation
 
@@ -110,6 +112,7 @@ Represent note content as deck-scoped data keyed by stable card identifiers. Kee
 - [ ] The note editor presents as lined paper
 - [ ] Speech-to-text note entry works on supported devices
 - [ ] The note system is ready for integration into all three platform-specific UIs
+- [ ] Notes are testable from the app scaffold without requiring later integration work
 
 ## Notes
 

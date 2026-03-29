@@ -45,6 +45,7 @@ The online mode is the monthly offering on top of the paid app. That means the a
 - [ ] Support configurable subscription pricing and packaging while business pricing is still undecided
 - [ ] Support subscription lapse behavior without deleting owned offline content
 - [ ] Ensure users without a subscription can still use the paid offline app normally
+- [ ] Integrate subscription state and streak surfaces into the app shell during the sprint
 
 ### Non-Functional Requirements
 
@@ -92,6 +93,7 @@ Reuse the capability-based gating model from Sprint 3 and connect it to actual o
 - [ ] Implement subscription entitlement evaluation in the online layer
 - [ ] Implement streak event recording and counters
 - [ ] Implement user-facing streak surfaces for premium users
+- [ ] Wire subscription messaging and streak views into the app shell
 
 ### Phase 3: Validation
 
@@ -110,6 +112,7 @@ Reuse the capability-based gating model from Sprint 3 and connect it to actual o
 - [ ] Subscription lapse does not break offline ownership
 - [ ] Streak logic is deterministic enough for analytics and support
 - [ ] The premium online tier is now meaningfully differentiated from the paid core app
+- [ ] The app exposes subscription and streak behavior in a testable way
 
 ## Notes
 

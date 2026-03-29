@@ -19,6 +19,7 @@ Deliver the offline-first core study experience that users receive with the one-
 - [ ] Deck renames propagate cleanly because cards reference stable deck IDs rather than copied deck names
 - [ ] Every flashcard can have its own notepad content, stored locally and recoverably
 - [ ] Imported images are auto-renamed, stored predictably, and previewable from the card UI
+- [ ] Each sprint in this epic advances the real app shell rather than only backend persistence code
 - [ ] The local storage contract is robust enough to support later cloud sync
 
 ## Sprints

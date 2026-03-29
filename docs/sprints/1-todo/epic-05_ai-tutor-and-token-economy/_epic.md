@@ -19,6 +19,7 @@ Deliver GradeFlip's AI study assistant as a multi-provider system that supports 
 - [ ] Users can choose deck-grounded chat or web-enabled chat modes
 - [ ] AI usage is charged with predictable internal study-token pricing
 - [ ] Token gifting and usage history are supported for online accounts
+- [ ] AI work is integrated into the app shell as it lands instead of remaining service-only
 - [ ] The token-pricing system estimates cost without requiring an extra AI call
 
 ## Sprints

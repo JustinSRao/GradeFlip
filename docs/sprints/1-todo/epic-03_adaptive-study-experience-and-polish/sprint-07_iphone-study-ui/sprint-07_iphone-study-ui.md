@@ -44,6 +44,7 @@ The flashcard interaction is one of the most visible parts of the app, and you e
 - [ ] Support compact display of image attachments within the card experience
 - [ ] Support create/edit entry points without overloading the study screen
 - [ ] Preserve light and dark readability in the phone layout
+- [ ] Deliver a runnable iPhone app slice rather than a disconnected UI prototype
 
 ### Non-Functional Requirements
 
@@ -91,6 +92,7 @@ Build an iPhone-first study flow with separate presentation states for browsing,
 - [ ] Implement the iPhone deck list and study screens
 - [ ] Implement the flashcard flip interaction
 - [ ] Integrate note and image affordances into the phone flow
+- [ ] Wire the iPhone study flow into the main app shell as the primary usable experience
 
 ### Phase 3: Validation
 
@@ -109,6 +111,7 @@ Build an iPhone-first study flow with separate presentation states for browsing,
 - [ ] Notes and image previews are reachable from the phone study experience
 - [ ] The phone UI feels intentionally designed rather than stretched from a larger layout
 - [ ] Sprint 8 and Sprint 9 can build on the established visual language
+- [ ] The app has a usable iPhone-focused end-to-end offline study slice
 
 ## Notes
 

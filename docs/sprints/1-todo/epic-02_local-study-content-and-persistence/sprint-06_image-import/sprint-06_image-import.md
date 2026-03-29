@@ -46,6 +46,7 @@ Images are part of the flashcard value proposition, but they can corrupt local d
 - [ ] Tapping or selecting the image preview enlarges the image in a focused viewer
 - [ ] Removing an attached image requires explicit confirmation
 - [ ] Deleting or moving a card updates image relationships safely
+- [ ] The app scaffold exposes image import and preview flows directly
 
 ### Non-Functional Requirements
 
@@ -95,6 +96,7 @@ When a user imports an image, generate a stable asset ID, derive a canonical fil
 - [ ] Implement image reference storage on flashcards
 - [ ] Implement compact preview and enlarged viewer flows
 - [ ] Implement safe image removal and cleanup
+- [ ] Integrate image actions into the app shell on supported Apple surfaces
 
 ### Phase 3: Validation
 
@@ -113,6 +115,7 @@ When a user imports an image, generate a stable asset ID, derive a canonical fil
 - [ ] Flashcards show a compact image affordance and an enlarged view on interaction
 - [ ] Image deletion is confirmed before the file relationship is removed
 - [ ] The local image model is ready for future sync or sharing work
+- [ ] The app shell has an end-to-end local image attachment slice
 
 ## Notes
 

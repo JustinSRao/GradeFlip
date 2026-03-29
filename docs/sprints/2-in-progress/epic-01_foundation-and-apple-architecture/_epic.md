@@ -19,6 +19,7 @@ Establish the technical foundation for GradeFlip as a native Apple-platform stud
 - [ ] Local-first storage boundaries are defined for decks, flashcards, notes, and images
 - [ ] Online-only capabilities are separated cleanly from the paid core app experience
 - [ ] Purchase and subscription gates are designed so offline and online features can coexist cleanly
+- [ ] The foundation epic leaves behind real app scaffolding instead of package-only groundwork
 - [ ] The first implementation sprints can proceed without revisiting foundational product decisions
 
 ## Sprints
@@ -34,6 +35,7 @@ Establish the technical foundation for GradeFlip as a native Apple-platform stud
 - [ ] Define Apple-platform target structure and shared domain modules
 - [ ] Define local file layout for deck JSON, note JSON, and image assets
 - [ ] Define the separation between local mode, online mode, and AI token usage
+- [ ] Define Windows authoring expectations and the required macOS validation path
 - [ ] Confirm backend choice for online sync, messaging, subscriptions, and token ledger
 
 ## Notes

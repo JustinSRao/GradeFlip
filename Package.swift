@@ -49,5 +49,10 @@ let package = Package(
             dependencies: ["GradeFlipBilling"],
             path: "packages/GradeFlipBilling/Tests/GradeFlipBillingTests"
         ),
+        .testTarget(
+            name: "GradeFlipStorageTests",
+            dependencies: ["GradeFlipStorage"],
+            path: "packages/GradeFlipStorage/Tests/GradeFlipStorageTests"
+        ),
     ]
 )

@@ -45,6 +45,7 @@ The app is not useful until a user can create decks, add cards, edit them later,
 - [ ] Delete actions for decks and flashcards require explicit user confirmation
 - [ ] Local deck and flashcard changes persist through the deck JSON pipeline
 - [ ] The deck list can show card counts and basic metadata needed for browsing
+- [ ] The app scaffold exposes usable deck and card management screens, not only persistence calls
 
 ### Non-Functional Requirements
 
@@ -93,6 +94,7 @@ Build deck and flashcard management on top of the deck-scoped JSON persistence l
 - [ ] Implement deck create, rename, and delete flows
 - [ ] Implement flashcard create, edit, and delete flows
 - [ ] Wire CRUD flows into the local storage layer
+- [ ] Integrate CRUD flows into the app shell with navigable editing surfaces
 
 ### Phase 3: Validation
 
@@ -110,6 +112,7 @@ Build deck and flashcard management on top of the deck-scoped JSON persistence l
 - [ ] Deck renames remain consistent across the deck's cards
 - [ ] Delete confirmation exists for deck and flashcard removal
 - [ ] The local CRUD layer is stable enough for notes and image attachments to build on top of it
+- [ ] The app has a usable local content-management slice ready for device testing
 
 ## Notes
 

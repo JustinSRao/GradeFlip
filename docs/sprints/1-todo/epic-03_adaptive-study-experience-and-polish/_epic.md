@@ -19,6 +19,7 @@ Shape GradeFlip into a high-quality Apple experience with distinct phone, tablet
 - [ ] Flashcards flip convincingly and support the study workflow without feeling gimmicky
 - [ ] Theme customization includes dark mode, light mode, and the requested color family options
 - [ ] iPad and Mac layouts make note-taking and deck navigation more efficient than the phone layout
+- [ ] The app remains continuously runnable on Apple platforms as each adaptive UI sprint lands
 - [ ] Accessibility and keyboard affordances are considered before launch
 
 ## Sprints

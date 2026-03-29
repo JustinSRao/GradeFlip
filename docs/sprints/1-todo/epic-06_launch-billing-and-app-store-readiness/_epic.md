@@ -19,6 +19,7 @@ Prepare GradeFlip to ship as a polished App Store product with stable core flows
 - [ ] Analytics events exist for key acquisition, retention, and feature-usage decisions
 - [ ] Privacy disclosures, permission copy, and App Store listing assets are ready for submission
 - [ ] The paid app, optional subscription, and AI token purchases are represented consistently across product and store assets
+- [ ] The prior sprints have already assembled a runnable product rather than leaving launch sprint to perform first-time app integration
 - [ ] GradeFlip is ready for TestFlight and App Store review
 
 ## Sprints

@@ -45,6 +45,7 @@ You want the AI assistant to work with ChatGPT, Claude, Gemini, Grok, and DeepSe
 - [ ] Build a context-packaging pipeline that turns deck/card/note content into AI-ready prompt material
 - [ ] Capture provider usage metadata needed later for token billing and analytics
 - [ ] Keep deck-grounded mode constrained to selected GradeFlip content rather than open web knowledge
+- [ ] The app scaffold gains a usable deck-grounded AI entry point during the sprint
 
 ### Non-Functional Requirements
 
@@ -92,6 +93,7 @@ Create a provider interface that normalizes request creation, response parsing, 
 - [ ] Implement the shared provider abstraction
 - [ ] Implement multi-deck context selection and packaging
 - [ ] Implement usage metadata capture for later billing
+- [ ] Integrate deck-grounded AI entry and response surfaces into the app shell
 
 ### Phase 3: Validation
 
@@ -110,6 +112,7 @@ Create a provider interface that normalizes request creation, response parsing, 
 - [ ] Deck-grounded responses are built from selected GradeFlip content rather than web search
 - [ ] Provider usage metadata is captured for later token accounting
 - [ ] Sprint 14 can add billing and web-enabled mode on top of this layer
+- [ ] The app exposes a testable deck-grounded AI flow after this sprint
 
 ## Notes
 
