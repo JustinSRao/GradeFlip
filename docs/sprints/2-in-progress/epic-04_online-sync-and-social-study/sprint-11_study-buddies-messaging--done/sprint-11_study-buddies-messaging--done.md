@@ -3,12 +3,13 @@ sprint: 11
 title: "Study buddies, messaging, deck sharing, requests, and likes"
 type: fullstack
 epic: 4
-status: in-progress
+status: done
 created: 2026-03-26T16:02:33Z
 started: 2026-03-29T17:14:15Z
-completed: null
+completed: 2026-03-29
 hours: null
 workflow_version: "3.1.0"
+
 
 ---
 
