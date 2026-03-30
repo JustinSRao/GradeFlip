@@ -1,0 +1,12 @@
+{
+  "sprint_number": 17,
+  "sprint_file": "docs\\sprints\\2-in-progress\\epic-07_windows-preview-harness-and-cross-platform-interaction-testing\\sprint-17_preview-harness-parity\\sprint-17_preview-harness-parity.md",
+  "sprint_title": "Preview harness parity for study, deck editing, and smoke-test flows",
+  "status": "complete",
+  "current_phase": 1,
+  "current_step": "1.1",
+  "started_at": "2026-03-29T17:36:40Z",
+  "workflow_version": "3.0",
+  "completed_steps": [],
+  "completed_at": "2026-03-29T17:38:14.921375-07:00"
+}
