@@ -146,13 +146,13 @@
     },
     "15": {
       "title": "End-to-end QA, analytics, privacy, and App Store launch assets",
-      "status": "planning",
+      "status": "done",
       "epic": 6,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.0
     }
   },
   "epics": {
@@ -208,7 +208,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 1,
-      "completedSprints": 0
+      "completedSprints": 1
     }
   },
   "nextEpicNumber": 7,

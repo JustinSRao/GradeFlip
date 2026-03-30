@@ -16,6 +16,9 @@ GradeFlip is a native Apple study app for iPhone, iPad, and Mac. The core produc
 - `docs/architecture/domain-model.md`
 - `docs/architecture/backlog-sequence.md`
 - `docs/architecture/development-and-testing-environments.md`
+- `docs/architecture/launch-readiness-checklist.md`
+- `docs/architecture/privacy-disclosures.md`
+- `docs/architecture/app-store-listing.md`
 
 ## Planned Module Layout
 
