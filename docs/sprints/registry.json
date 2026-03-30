@@ -116,13 +116,13 @@
     },
     "12": {
       "title": "Subscription online features and friend study streaks",
-      "status": "planning",
+      "status": "done",
       "epic": 4,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.0
     },
     "13": {
       "title": "Multi-provider AI abstraction with deck-grounded chat",
@@ -190,7 +190,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 3,
-      "completedSprints": 2
+      "completedSprints": 3
     },
     "5": {
       "title": "AI tutor and token economy",
