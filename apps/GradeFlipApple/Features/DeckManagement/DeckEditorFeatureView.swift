@@ -36,6 +36,12 @@ struct DeckEditorFeatureView: View {
                         Text(card.noteText.isEmpty ? "No note yet" : "Note ready")
                             .font(.caption)
                             .foregroundStyle(.secondary)
+                        NavigationLink("Manage Images") {
+                            CardImagesFeatureView(card: $card)
+                        }
+                        Text(card.images.isEmpty ? "No images attached" : "\(card.images.count) image attachments")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
                         Button("Delete Card", role: .destructive) {
                             pendingCardDeletion = card
                         }

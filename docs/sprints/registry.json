@@ -56,23 +56,23 @@
     },
     "6": {
       "title": "Image import, auto-rename, preview, and delete safeguards",
-      "status": "planning",
+      "status": "done",
       "epic": 2,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.0
     },
     "7": {
       "title": "iPhone study UI with realistic flashcard flip interaction",
-      "status": "planning",
+      "status": "done",
       "epic": 3,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.1
     },
     "8": {
       "title": "iPad adaptive workspace and multi-pane study flows",
@@ -172,7 +172,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 3,
-      "completedSprints": 2
+      "completedSprints": 3
     },
     "3": {
       "title": "Adaptive study experience and polish",
@@ -181,7 +181,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 3,
-      "completedSprints": 0
+      "completedSprints": 1
     },
     "4": {
       "title": "Online sync and social study",

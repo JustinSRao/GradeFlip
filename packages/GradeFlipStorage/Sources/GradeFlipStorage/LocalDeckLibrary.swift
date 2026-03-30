@@ -3,6 +3,7 @@ import GradeFlipDomain
 
 public enum LocalDeckLibraryError: Error, Equatable, Sendable {
     case missingFlashcard(FlashcardID)
+    case imageAssetNotAttached(ImageAssetID)
 }
 
 public final class LocalDeckLibrary: Sendable {
@@ -117,6 +118,8 @@ public final class LocalDeckLibrary: Sendable {
             throw LocalDeckLibraryError.missingFlashcard(flashcardID)
         }
 
+        let removedImages = snapshot.contents.imageAssets.filter { $0.flashcardID == flashcardID }
+
         snapshot.contents.cards.removeAll { $0.id == flashcardID }
         snapshot.notes.notes.removeAll { $0.flashcardID == flashcardID }
         snapshot.contents.imageAssets.removeAll { $0.flashcardID == flashcardID }
@@ -124,6 +127,7 @@ public final class LocalDeckLibrary: Sendable {
         snapshot.contents.savedAt = .now
         snapshot.notes.savedAt = .now
         try store.save(snapshot: snapshot)
+        try removedImages.forEach { try store.deleteImage($0) }
         return snapshot
     }
 
@@ -164,6 +168,56 @@ public final class LocalDeckLibrary: Sendable {
         snapshot.contents.savedAt = .now
         snapshot.notes.savedAt = .now
         try store.save(snapshot: snapshot)
+        return snapshot
+    }
+
+    @discardableResult
+    public func attachImage(
+        deckID: DeckID,
+        flashcardID: FlashcardID,
+        data: Data,
+        originalFilename: String
+    ) throws -> LocalDeckSnapshot {
+        var snapshot = try store.load(deckID: deckID)
+        guard let cardIndex = snapshot.contents.cards.firstIndex(where: { $0.id == flashcardID }) else {
+            throw LocalDeckLibraryError.missingFlashcard(flashcardID)
+        }
+
+        let imageAsset = try store.storeImage(
+            data,
+            for: deckID,
+            flashcardID: flashcardID,
+            originalFilename: originalFilename
+        )
+
+        snapshot.contents.imageAssets.append(imageAsset)
+        snapshot.contents.cards[cardIndex].imageAssetIDs.append(imageAsset.id)
+        snapshot.contents.deck.updatedAt = .now
+        snapshot.contents.savedAt = .now
+        try store.save(snapshot: snapshot)
+        return snapshot
+    }
+
+    @discardableResult
+    public func removeImage(
+        deckID: DeckID,
+        flashcardID: FlashcardID,
+        imageAssetID: ImageAssetID
+    ) throws -> LocalDeckSnapshot {
+        var snapshot = try store.load(deckID: deckID)
+        guard let cardIndex = snapshot.contents.cards.firstIndex(where: { $0.id == flashcardID }) else {
+            throw LocalDeckLibraryError.missingFlashcard(flashcardID)
+        }
+        guard let imageAsset = snapshot.contents.imageAssets.first(where: { $0.id == imageAssetID }) else {
+            throw LocalDeckLibraryError.imageAssetNotAttached(imageAssetID)
+        }
+
+        snapshot.contents.imageAssets.removeAll { $0.id == imageAssetID }
+        snapshot.contents.cards[cardIndex].imageAssetIDs.removeAll { $0 == imageAssetID }
+        snapshot.contents.deck.updatedAt = .now
+        snapshot.contents.savedAt = .now
+        try store.save(snapshot: snapshot)
+        try store.deleteImage(imageAsset)
         return snapshot
     }
 }

@@ -33,11 +33,31 @@ struct CardDraft: Identifiable, Hashable {
     var frontText: String
     var backText: String
     var noteText: String
+    var images: [ImageDraft]
 
-    init(id: UUID = UUID(), frontText: String, backText: String, noteText: String = "") {
+    init(
+        id: UUID = UUID(),
+        frontText: String,
+        backText: String,
+        noteText: String = "",
+        images: [ImageDraft] = []
+    ) {
         self.id = id
         self.frontText = frontText
         self.backText = backText
         self.noteText = noteText
+        self.images = images
+    }
+}
+
+struct ImageDraft: Identifiable, Hashable {
+    let id: UUID
+    var filename: String
+    var tintName: String
+
+    init(id: UUID = UUID(), filename: String, tintName: String = "blue") {
+        self.id = id
+        self.filename = filename
+        self.tintName = tintName
     }
 }
