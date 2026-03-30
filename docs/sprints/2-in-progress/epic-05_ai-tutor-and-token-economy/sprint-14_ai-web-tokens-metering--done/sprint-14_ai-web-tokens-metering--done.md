@@ -3,12 +3,13 @@ sprint: 14
 title: "Web-enabled AI chat, study tokens, gifting, and usage metering"
 type: fullstack
 epic: 5
-status: in-progress
+status: done
 created: 2026-03-26T16:02:34Z
 started: 2026-03-29T17:19:38Z
-completed: null
+completed: 2026-03-29
 hours: null
 workflow_version: "3.1.0"
+
 
 ---
 

@@ -136,13 +136,13 @@
     },
     "14": {
       "title": "Web-enabled AI chat, study tokens, gifting, and usage metering",
-      "status": "planning",
+      "status": "done",
       "epic": 5,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.0
     },
     "15": {
       "title": "End-to-end QA, analytics, privacy, and App Store launch assets",
@@ -199,7 +199,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 2,
-      "completedSprints": 1
+      "completedSprints": 2
     },
     "6": {
       "title": "Launch, billing, and App Store readiness",
