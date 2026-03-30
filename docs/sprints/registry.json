@@ -86,13 +86,13 @@
     },
     "9": {
       "title": "Mac app layout, themes, dark mode, and accessibility polish",
-      "status": "planning",
+      "status": "done",
       "epic": 3,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.0
     },
     "10": {
       "title": "Online accounts, auth, and cloud sync backend",
@@ -181,7 +181,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 3,
-      "completedSprints": 2
+      "completedSprints": 3
     },
     "4": {
       "title": "Online sync and social study",

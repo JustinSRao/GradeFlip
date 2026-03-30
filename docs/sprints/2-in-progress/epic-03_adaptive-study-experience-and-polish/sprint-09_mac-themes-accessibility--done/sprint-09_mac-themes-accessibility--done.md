@@ -3,12 +3,13 @@ sprint: 9
 title: "Mac app layout, themes, dark mode, and accessibility polish"
 type: fullstack
 epic: 3
-status: in-progress
+status: done
 created: 2026-03-26T16:02:33Z
 started: 2026-03-29T17:07:03Z
-completed: null
+completed: 2026-03-29
 hours: null
 workflow_version: "3.1.0"
+
 
 ---
 
