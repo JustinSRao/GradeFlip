@@ -1,4 +1,5 @@
 import Foundation
+import GradeFlipAI
 import GradeFlipBilling
 import GradeFlipOnline
 import GradeFlipStorage
@@ -10,6 +11,7 @@ struct GradeFlipAppEnvironment {
     let previewStudyDecks: [StudyDeckDraft]
     let defaultTheme: GradeFlipTheme
     let backendSelection: OnlineBackendSelection
+    let aiProviderCatalog: AIProviderCatalog
 
     static func bootstrap(rootURL: URL) -> GradeFlipAppEnvironment {
         GradeFlipAppEnvironment(
@@ -27,7 +29,8 @@ struct GradeFlipAppEnvironment {
             ),
             previewStudyDecks: StudyDeckDraft.sampleDecks,
             defaultTheme: .blue,
-            backendSelection: .recommendedSupabase
+            backendSelection: .recommendedSupabase,
+            aiProviderCatalog: .default
         )
     }
 }

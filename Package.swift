@@ -36,7 +36,7 @@ let package = Package(
         ),
         .target(
             name: "GradeFlipAI",
-            dependencies: ["GradeFlipDomain", "GradeFlipBilling"],
+            dependencies: ["GradeFlipDomain", "GradeFlipBilling", "GradeFlipStorage"],
             path: "packages/GradeFlipAI/Sources/GradeFlipAI"
         ),
         .testTarget(
@@ -58,6 +58,11 @@ let package = Package(
             name: "GradeFlipOnlineTests",
             dependencies: ["GradeFlipOnline"],
             path: "packages/GradeFlipOnline/Tests/GradeFlipOnlineTests"
+        ),
+        .testTarget(
+            name: "GradeFlipAITests",
+            dependencies: ["GradeFlipAI"],
+            path: "packages/GradeFlipAI/Tests/GradeFlipAITests"
         ),
     ]
 )

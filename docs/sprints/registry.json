@@ -126,13 +126,13 @@
     },
     "13": {
       "title": "Multi-provider AI abstraction with deck-grounded chat",
-      "status": "planning",
+      "status": "done",
       "epic": 5,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.1
     },
     "14": {
       "title": "Web-enabled AI chat, study tokens, gifting, and usage metering",
@@ -199,7 +199,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 2,
-      "completedSprints": 0
+      "completedSprints": 1
     },
     "6": {
       "title": "Launch, billing, and App Store readiness",

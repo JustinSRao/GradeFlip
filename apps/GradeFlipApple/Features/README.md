@@ -17,3 +17,4 @@ Current feature slices:
 - `Study/StudyFlipCardView.swift` for the shared flashcard flip interaction
 - `Study/StudyTheme.swift` for the requested palette system across Apple surfaces
 - `Online/OnlineHubFeatureView.swift` for Sprint 10 authenticated online entry and sync/social shell
+- `AI/AIHubFeatureView.swift` for Sprint 13/14 provider selection, deck grounding, and token estimate surfaces

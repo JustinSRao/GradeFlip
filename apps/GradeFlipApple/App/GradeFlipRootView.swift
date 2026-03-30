@@ -25,6 +25,15 @@ struct GradeFlipRootView: View {
             .tabItem {
                 Label("Online", systemImage: "person.2")
             }
+
+            AIHubFeatureView(
+                tokenBalance: appEnvironment.previewEntitlements.availableStudyTokens,
+                providerOptions: appEnvironment.aiProviderCatalog.models.map(\.displayName),
+                deckOptions: appEnvironment.previewStudyDecks.map(\.title)
+            )
+            .tabItem {
+                Label("AI", systemImage: "sparkles.rectangle.stack")
+            }
         }
         .task {
             if studyDecks.isEmpty {
