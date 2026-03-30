@@ -1,0 +1,52 @@
+{
+  "decks": [
+    {
+      "id": "deck-biology-preview",
+      "title": "Biology Sprint Review",
+      "cards": [
+        {
+          "id": "card-mitochondrion",
+          "frontText": "What does the mitochondrion do?",
+          "backText": "Produces ATP and supports cellular respiration.",
+          "noteText": "Focus on ATP wording for tests.",
+          "isStarred": true,
+          "images": [
+            {
+              "id": "image-cell-diagram",
+              "filename": "cell-diagram.png",
+              "tintName": "green"
+            }
+          ]
+        },
+        {
+          "id": "card-osmosis",
+          "frontText": "What is osmosis?",
+          "backText": "Movement of water across a semipermeable membrane.",
+          "noteText": "Remember passive transport.",
+          "isStarred": false,
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "deck-history-preview",
+      "title": "US History",
+      "cards": [
+        {
+          "id": "card-constitution",
+          "frontText": "When was the Constitution ratified?",
+          "backText": "1788.",
+          "noteText": "Federalist Papers context matters.",
+          "isStarred": false,
+          "images": [
+            {
+              "id": "image-constitution",
+              "filename": "constitution-notes.jpg",
+              "tintName": "orange"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

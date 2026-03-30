@@ -1,6 +1,6 @@
 {
   "counters": {
-    "next_sprint": 16,
+    "next_sprint": 18,
     "next_epic": 7
   },
   "sprints": {
@@ -153,6 +153,26 @@
       "started": null,
       "completed": "2026-03-29",
       "hours": 7.0
+    },
+    "16": {
+      "title": "Windows desktop or web preview harness foundation for offline interaction testing",
+      "status": "done",
+      "epic": 7,
+      "type": "fullstack",
+      "created": "2026-03-29",
+      "started": null,
+      "completed": "2026-03-29",
+      "hours": 7.1
+    },
+    "17": {
+      "title": "Preview harness parity for study, deck editing, and smoke-test flows",
+      "status": "planning",
+      "epic": 7,
+      "type": "fullstack",
+      "created": "2026-03-29",
+      "started": null,
+      "completed": null,
+      "hours": null
     }
   },
   "epics": {
@@ -209,8 +229,17 @@
       "completed": null,
       "totalSprints": 1,
       "completedSprints": 1
+    },
+    "7": {
+      "title": "Windows preview harness and cross-platform interaction testing",
+      "status": "planning",
+      "created": "2026-03-29",
+      "started": null,
+      "completed": null,
+      "totalSprints": 2,
+      "completedSprints": 1
     }
   },
-  "nextEpicNumber": 7,
-  "nextSprintNumber": 16
+  "nextEpicNumber": 8,
+  "nextSprintNumber": 18
 }

@@ -19,6 +19,7 @@ GradeFlip is a native Apple study app for iPhone, iPad, and Mac. The core produc
 - `docs/architecture/launch-readiness-checklist.md`
 - `docs/architecture/privacy-disclosures.md`
 - `docs/architecture/app-store-listing.md`
+- `docs/architecture/windows-preview-harness.md`
 
 ## Planned Module Layout
 
@@ -64,6 +65,11 @@ GradeFlip is a native Apple study app for iPhone, iPad, and Mac. The core produc
 
 - Sprint 15: End-to-end QA, analytics, privacy, and App Store launch assets
 
+### Epic 7: Windows preview harness and cross-platform interaction testing
+
+- Sprint 16: Windows desktop or web preview harness foundation for offline interaction testing
+- Sprint 17: Preview harness parity for study, deck editing, and smoke-test flows
+
 ## Working the Backlog
 
 Planning rule for every sprint:
@@ -71,12 +77,27 @@ Planning rule for every sprint:
 - Each sprint must leave the repo in a more app-shaped state than before it started.
 - Scaffolding is not deferred to the end. If a sprint introduces storage, billing, sync, AI, or UI behavior, it should also wire the relevant app-facing integration surface needed to exercise that behavior later.
 - By the end of Sprint 15, the repository should be in a release-ready state for Apple-platform shipping rather than a collection of isolated modules.
+- Epic 7 is optional follow-on tooling for Windows development convenience. It is not a redefinition of the Apple release path.
 
 ## Windows Development Note
 
 - Windows is a valid development environment for planning, docs, backend work, and shared Swift package code.
 - Native iPhone, iPad, and macOS app execution still requires macOS. Apple simulators do not run natively on Windows, so final app verification needs a Mac, a remote macOS machine, or macOS CI.
 - Windows-side testing remains useful for repo workflows and shared logic, but it is not a substitute for Apple-platform runtime validation.
+
+## Windows Preview Harness
+
+You can launch the local preview harness from Windows with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\start-preview-web.ps1
+```
+
+Run the smoke test with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\preview-smoke.ps1
+```
 
 Run commands from the project root:
 

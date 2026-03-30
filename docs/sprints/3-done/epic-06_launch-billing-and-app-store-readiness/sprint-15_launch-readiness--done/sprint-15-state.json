@@ -1,0 +1,12 @@
+{
+  "sprint_number": 15,
+  "sprint_file": "docs\\sprints\\2-in-progress\\epic-06_launch-billing-and-app-store-readiness\\sprint-15_launch-readiness\\sprint-15_launch-readiness.md",
+  "sprint_title": "End-to-end QA, analytics, privacy, and App Store launch assets",
+  "status": "complete",
+  "current_phase": 1,
+  "current_step": "1.1",
+  "started_at": "2026-03-29T17:20:32Z",
+  "workflow_version": "3.0",
+  "completed_steps": [],
+  "completed_at": "2026-03-29T17:22:16.921778-07:00"
+}

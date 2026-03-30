@@ -59,6 +59,13 @@ Two planning rules apply across the entire sequence:
 15. Sprint 15
     Run end-to-end QA, analytics, privacy, submission preparation, and release signoff.
 
+### Epic 7: Windows preview harness and cross-platform interaction testing
+
+16. Sprint 16
+    Build a Windows-runnable preview harness for offline interaction testing.
+17. Sprint 17
+    Extend the harness for broader parity and smoke-test workflows.
+
 ## Dependency Highlights
 
 - Sprint 2 depends on Sprint 1.
@@ -69,6 +76,8 @@ Two planning rules apply across the entire sequence:
 - Sprint 12 depends on Sprint 3, 10, and 11.
 - Sprint 14 depends on Sprint 11 and 13.
 - Sprint 15 depends on the effective completion of all preceding delivery sprints.
+- Sprint 16 depends on the offline product and adaptive study work already being in place.
+- Sprint 17 depends on Sprint 16.
 
 ## Suggested Milestones
 
@@ -121,3 +130,13 @@ Result:
 - study tokens
 - gifting
 - deterministic usage metering
+
+### Milestone E: Windows interaction harness
+
+Complete Sprints 16 and 17.
+
+Result:
+
+- Windows-runnable interaction harness for the offline slice
+- smoke-testable preview path without Apple simulators
+- clearer separation between Windows preview validation and Apple runtime QA

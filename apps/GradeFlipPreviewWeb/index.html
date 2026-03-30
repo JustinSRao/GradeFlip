@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GradeFlip Preview Harness</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <p class="eyebrow">Windows Preview</p>
+        <h1>GradeFlip</h1>
+        <p class="sidebar-copy">
+          Local interaction harness for Windows. This is a development aid, not the shipping Apple app.
+        </p>
+      </div>
+      <nav class="tab-list" aria-label="Preview Sections">
+        <button class="tab-button is-active" data-tab="study">Study</button>
+        <button class="tab-button" data-tab="decks">Decks</button>
+      </nav>
+      <section class="sidebar-panel">
+        <h2>Harness Scope</h2>
+        <ul>
+          <li>Deck browsing</li>
+          <li>Deck editing</li>
+          <li>Note editing</li>
+          <li>Image placeholders</li>
+          <li>Study flip flow</li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Offline Interaction Testing</p>
+          <h2 id="view-title">Study</h2>
+        </div>
+        <div class="topbar-meta">
+          <span class="badge">Windows Runnable</span>
+          <span class="badge badge-muted">No Apple runtime required</span>
+        </div>
+      </header>
+
+      <section id="study-view" class="view is-active" aria-labelledby="view-title">
+        <div class="study-grid">
+          <section class="panel deck-column">
+            <div class="panel-header">
+              <h3>Decks</h3>
+              <p>Select a study deck</p>
+            </div>
+            <div id="study-deck-list" class="deck-list"></div>
+          </section>
+
+          <section class="panel study-column">
+            <div class="study-meta">
+              <div>
+                <p class="eyebrow">Progress</p>
+                <h3 id="study-progress">1 / 1</h3>
+              </div>
+              <button id="study-star-toggle" class="icon-button" type="button" aria-label="Toggle star">☆</button>
+            </div>
+
+            <button id="study-card" class="study-card" type="button" aria-live="polite">
+              <span class="card-label" id="study-face-label">Front</span>
+              <span class="card-copy" id="study-card-copy">Loading…</span>
+              <span class="card-hint">Click to flip</span>
+            </button>
+
+            <div class="study-actions">
+              <button id="study-previous" type="button">Previous</button>
+              <button id="study-flip" type="button" class="button-accent">Flip</button>
+              <button id="study-next" type="button">Next</button>
+            </div>
+
+            <div class="study-detail-grid">
+              <section class="detail-card">
+                <div class="panel-header">
+                  <h3>Quick Note</h3>
+                  <p>Study-side preview</p>
+                </div>
+                <p id="study-note-preview" class="detail-copy"></p>
+              </section>
+              <section class="detail-card">
+                <div class="panel-header">
+                  <h3>Images</h3>
+                  <p>Placeholder previews</p>
+                </div>
+                <div id="study-image-strip" class="image-strip"></div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="decks-view" class="view" aria-labelledby="view-title">
+        <div class="deck-workspace">
+          <section class="panel deck-column">
+            <div class="panel-header">
+              <h3>Deck Library</h3>
+              <p>Editable local fixtures</p>
+            </div>
+            <div id="editor-deck-list" class="deck-list"></div>
+          </section>
+
+          <section class="panel editor-column">
+            <div class="panel-header">
+              <h3 id="editor-deck-title">Deck Editor</h3>
+              <p>Mirrors the offline editing slice</p>
+            </div>
+
+            <label class="field">
+              <span>Deck Title</span>
+              <input id="deck-title-input" type="text">
+            </label>
+
+            <section class="subpanel">
+              <div class="panel-header">
+                <h3>Add Card</h3>
+                <p>Sample local editing flow</p>
+              </div>
+              <div class="inline-fields">
+                <label class="field">
+                  <span>Front</span>
+                  <input id="new-card-front" type="text">
+                </label>
+                <label class="field">
+                  <span>Back</span>
+                  <input id="new-card-back" type="text">
+                </label>
+              </div>
+              <button id="add-card-button" type="button" class="button-accent">Add Card</button>
+            </section>
+
+            <section class="subpanel">
+              <div class="panel-header">
+                <h3>Cards</h3>
+                <p>Edit note and image placeholder state</p>
+              </div>
+              <div id="editor-card-list" class="card-editor-list"></div>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

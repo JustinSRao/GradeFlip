@@ -67,3 +67,13 @@ The final project should include:
 - App Store submission materials and privacy metadata
 
 Windows remains a valid authoring environment, but not the sole validation environment for release.
+
+## Optional Windows Preview Harness
+
+If a Windows-runnable preview harness is added later, it should be treated as:
+
+- a local development aid
+- a smoke-test surface for interaction checks
+- a supplement to shared-package tests
+
+It should not be treated as evidence that iPhone, iPad, or macOS runtime behavior has been validated for release.
