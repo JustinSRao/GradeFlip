@@ -12,42 +12,19 @@ struct GradeFlipRootView: View {
     @State private var useDarkAppearancePreview = false
 
     var body: some View {
-        Group {
-            #if os(iOS)
-            ViewThatFits {
-                IPadStudyWorkspaceView(
-                    decks: $studyDecks,
-                    selectedDeckID: $selectedDeckID,
-                    selectedCardID: $selectedCardID,
-                    selectedTheme: $selectedTheme
-                )
-                IPhoneStudyFeatureView(
-                    decks: $studyDecks,
-                    selectedDeckID: $selectedDeckID,
-                    selectedCardID: $selectedCardID,
-                    selectedTheme: $selectedTheme
-                )
+        TabView {
+            studySurface
+                .tabItem {
+                    Label("Study", systemImage: "rectangle.on.rectangle")
+                }
+
+            OnlineHubFeatureView(
+                entitlements: appEnvironment.previewEntitlements,
+                backendSelection: appEnvironment.backendSelection.kind.rawValue
+            )
+            .tabItem {
+                Label("Online", systemImage: "person.2")
             }
-            #elseif os(macOS)
-            NavigationStack {
-                MacStudyExperienceView(
-                    decks: $studyDecks,
-                    selectedDeckID: $selectedDeckID,
-                    selectedCardID: $selectedCardID,
-                    selectedTheme: $selectedTheme,
-                    useDarkAppearancePreview: $useDarkAppearancePreview
-                )
-            }
-            #else
-            NavigationStack {
-                IPhoneStudyFeatureView(
-                    decks: $studyDecks,
-                    selectedDeckID: $selectedDeckID,
-                    selectedCardID: $selectedCardID,
-                    selectedTheme: $selectedTheme
-                )
-            }
-            #endif
         }
         .task {
             if studyDecks.isEmpty {
@@ -57,5 +34,44 @@ struct GradeFlipRootView: View {
                 selectedCardID = studyDecks.first?.cards.first?.id
             }
         }
+    }
+
+    @ViewBuilder
+    private var studySurface: some View {
+        #if os(iOS)
+        ViewThatFits {
+            IPadStudyWorkspaceView(
+                decks: $studyDecks,
+                selectedDeckID: $selectedDeckID,
+                selectedCardID: $selectedCardID,
+                selectedTheme: $selectedTheme
+            )
+            IPhoneStudyFeatureView(
+                decks: $studyDecks,
+                selectedDeckID: $selectedDeckID,
+                selectedCardID: $selectedCardID,
+                selectedTheme: $selectedTheme
+            )
+        }
+        #elseif os(macOS)
+        NavigationStack {
+            MacStudyExperienceView(
+                decks: $studyDecks,
+                selectedDeckID: $selectedDeckID,
+                selectedCardID: $selectedCardID,
+                selectedTheme: $selectedTheme,
+                useDarkAppearancePreview: $useDarkAppearancePreview
+            )
+        }
+        #else
+        NavigationStack {
+            IPhoneStudyFeatureView(
+                decks: $studyDecks,
+                selectedDeckID: $selectedDeckID,
+                selectedCardID: $selectedCardID,
+                selectedTheme: $selectedTheme
+            )
+        }
+        #endif
     }
 }

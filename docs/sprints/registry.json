@@ -96,13 +96,13 @@
     },
     "10": {
       "title": "Online accounts, auth, and cloud sync backend",
-      "status": "planning",
+      "status": "done",
       "epic": 4,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.1
     },
     "11": {
       "title": "Study buddies, messaging, deck sharing, requests, and likes",
@@ -190,7 +190,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 3,
-      "completedSprints": 0
+      "completedSprints": 1
     },
     "5": {
       "title": "AI tutor and token economy",

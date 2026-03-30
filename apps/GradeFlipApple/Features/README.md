@@ -16,3 +16,4 @@ Current feature slices:
 - `Study/MacStudyExperienceView.swift` for Sprint 9 Mac layout, themes, and keyboard-first presentation
 - `Study/StudyFlipCardView.swift` for the shared flashcard flip interaction
 - `Study/StudyTheme.swift` for the requested palette system across Apple surfaces
+- `Online/OnlineHubFeatureView.swift` for Sprint 10 authenticated online entry and sync/social shell
