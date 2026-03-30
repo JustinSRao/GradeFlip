@@ -170,7 +170,8 @@ textarea {
 }
 
 .study-grid,
-.deck-workspace {
+.deck-workspace,
+.parity-grid {
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 18px;
@@ -294,6 +295,28 @@ textarea {
   gap: 10px;
 }
 
+.stack-list {
+  display: grid;
+  gap: 12px;
+}
+
+.stack-item {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px;
+  background: #fbfdff;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.compact-card {
+  margin-top: 18px;
+}
+
 .image-chip {
   min-width: 120px;
   padding: 12px;
@@ -365,7 +388,8 @@ textarea {
   .study-grid,
   .deck-workspace,
   .study-detail-grid,
-  .inline-fields {
+  .inline-fields,
+  .parity-grid {
     grid-template-columns: 1fr;
   }
 

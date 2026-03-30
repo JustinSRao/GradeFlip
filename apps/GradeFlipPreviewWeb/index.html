@@ -19,6 +19,8 @@
       <nav class="tab-list" aria-label="Preview Sections">
         <button class="tab-button is-active" data-tab="study">Study</button>
         <button class="tab-button" data-tab="decks">Decks</button>
+        <button class="tab-button" data-tab="online">Online</button>
+        <button class="tab-button" data-tab="ai">AI</button>
       </nav>
       <section class="sidebar-panel">
         <h2>Harness Scope</h2>
@@ -28,6 +30,8 @@
           <li>Note editing</li>
           <li>Image placeholders</li>
           <li>Study flip flow</li>
+          <li>Online shell states</li>
+          <li>AI shell states</li>
         </ul>
       </section>
     </aside>
@@ -141,6 +145,68 @@
               </div>
               <div id="editor-card-list" class="card-editor-list"></div>
             </section>
+          </section>
+        </div>
+      </section>
+
+      <section id="online-view" class="view" aria-labelledby="view-title">
+        <div class="parity-grid">
+          <section class="panel">
+            <div class="panel-header">
+              <h3>Account And Sync</h3>
+              <p>Stubbed integration state for Windows-side checks</p>
+            </div>
+            <div id="online-status" class="stack-list"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h3>Social Feed</h3>
+              <p>Representative event stream</p>
+            </div>
+            <div id="online-feed" class="stack-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="ai-view" class="view" aria-labelledby="view-title">
+        <div class="parity-grid">
+          <section class="panel">
+            <div class="panel-header">
+              <h3>Provider And Mode</h3>
+              <p>Stubbed AI shell for interaction testing</p>
+            </div>
+            <label class="field">
+              <span>Model</span>
+              <select id="ai-model-select"></select>
+            </label>
+            <label class="field">
+              <span>Mode</span>
+              <select id="ai-mode-select">
+                <option value="deckGrounded">Deck Grounded</option>
+                <option value="webEnabled">Web Enabled</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Prompt</span>
+              <textarea id="ai-prompt-input">Quiz me on osmosis and cell respiration.</textarea>
+            </label>
+            <div class="pill-row">
+              <span class="pill" id="ai-estimate-pill">About 0 study tokens</span>
+              <span class="pill" id="ai-balance-pill">Balance 0</span>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h3>Grounding And Output</h3>
+              <p>Representative shell states</p>
+            </div>
+            <div id="ai-selected-decks" class="stack-list"></div>
+            <div class="detail-card compact-card">
+              <p class="eyebrow">Preview Response</p>
+              <p id="ai-preview-response" class="detail-copy"></p>
+            </div>
           </section>
         </div>
       </section>

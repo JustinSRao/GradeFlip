@@ -17,6 +17,8 @@ The Windows preview harness provides a local interaction surface for GradeFlip w
 - note editing
 - image placeholder visibility
 - study-card flip flow
+- online shell state previews
+- AI shell state previews
 
 ## Boundaries
 

@@ -5,6 +5,8 @@
   const state = {
     activeTab: "study",
     decks: structuredClone(seed.decks),
+    online: structuredClone(seed.online),
+    ai: structuredClone(seed.ai),
     selectedDeckId: seed.decks[0]?.id ?? null,
     selectedCardId: seed.decks[0]?.cards[0]?.id ?? null,
     studyShowsBack: false,
@@ -15,6 +17,8 @@
     views: {
       study: document.getElementById("study-view"),
       decks: document.getElementById("decks-view"),
+      online: document.getElementById("online-view"),
+      ai: document.getElementById("ai-view"),
     },
     viewTitle: document.getElementById("view-title"),
     studyDeckList: document.getElementById("study-deck-list"),
@@ -35,6 +39,15 @@
     newCardBack: document.getElementById("new-card-back"),
     addCardButton: document.getElementById("add-card-button"),
     editorCardList: document.getElementById("editor-card-list"),
+    onlineStatus: document.getElementById("online-status"),
+    onlineFeed: document.getElementById("online-feed"),
+    aiModelSelect: document.getElementById("ai-model-select"),
+    aiModeSelect: document.getElementById("ai-mode-select"),
+    aiPromptInput: document.getElementById("ai-prompt-input"),
+    aiEstimatePill: document.getElementById("ai-estimate-pill"),
+    aiBalancePill: document.getElementById("ai-balance-pill"),
+    aiSelectedDecks: document.getElementById("ai-selected-decks"),
+    aiPreviewResponse: document.getElementById("ai-preview-response"),
   };
 
   function currentDeck() {
@@ -60,7 +73,13 @@
 
   function setActiveTab(tab) {
     state.activeTab = tab;
-    elements.viewTitle.textContent = tab === "study" ? "Study" : "Decks";
+    const titles = {
+      study: "Study",
+      decks: "Decks",
+      online: "Online",
+      ai: "AI",
+    };
+    elements.viewTitle.textContent = titles[tab] ?? "Preview";
     elements.tabButtons.forEach((button) => {
       button.classList.toggle("is-active", button.dataset.tab === tab);
     });
@@ -194,10 +213,64 @@
     });
   }
 
+  function renderOnline() {
+    elements.onlineStatus.innerHTML = "";
+    elements.onlineFeed.innerHTML = "";
+
+    [
+      `Account: ${state.online.accountState}`,
+      `Sync: ${state.online.syncStatus}`,
+      `Subscription: ${state.online.subscriptionState}`,
+      `Backend: ${state.online.backend}`,
+    ].forEach((item) => {
+      const row = document.createElement("div");
+      row.className = "stack-item";
+      row.textContent = item;
+      elements.onlineStatus.appendChild(row);
+    });
+
+    state.online.socialFeed.forEach((item) => {
+      const row = document.createElement("div");
+      row.className = "stack-item";
+      row.textContent = item;
+      elements.onlineFeed.appendChild(row);
+    });
+  }
+
+  function renderAI() {
+    const models = state.ai.models;
+
+    if (elements.aiModelSelect.options.length === 0) {
+      models.forEach((model) => {
+        const option = document.createElement("option");
+        option.value = model.id;
+        option.textContent = model.displayName;
+        elements.aiModelSelect.appendChild(option);
+      });
+      elements.aiModelSelect.value = state.ai.selectedModelId;
+      elements.aiModeSelect.value = state.ai.mode;
+      elements.aiPromptInput.value = state.ai.prompt;
+    }
+
+    elements.aiEstimatePill.textContent = `About ${state.ai.estimatedTokens} study tokens`;
+    elements.aiBalancePill.textContent = `Balance ${state.ai.tokenBalance}`;
+    elements.aiPreviewResponse.textContent = state.ai.previewResponse;
+    elements.aiSelectedDecks.innerHTML = "";
+
+    state.ai.selectedDeckTitles.forEach((deckTitle) => {
+      const row = document.createElement("div");
+      row.className = "stack-item";
+      row.textContent = deckTitle;
+      elements.aiSelectedDecks.appendChild(row);
+    });
+  }
+
   function render() {
     setActiveTab(state.activeTab);
     renderStudy();
     renderDeckEditor();
+    renderOnline();
+    renderAI();
   }
 
   elements.tabButtons.forEach((button) => {
@@ -271,6 +344,24 @@
     elements.newCardFront.value = "";
     elements.newCardBack.value = "";
     render();
+  });
+
+  elements.aiModelSelect.addEventListener("change", (event) => {
+    state.ai.selectedModelId = event.target.value;
+  });
+
+  elements.aiModeSelect.addEventListener("change", (event) => {
+    state.ai.mode = event.target.value;
+    state.ai.previewResponse = state.ai.mode === "webEnabled"
+      ? "Web-enabled preview mode remains a shell state here; real provider calls still require service credentials."
+      : "Deck-grounded preview mode stays constrained to the selected GradeFlip deck fixtures.";
+    renderAI();
+  });
+
+  elements.aiPromptInput.addEventListener("input", (event) => {
+    state.ai.prompt = event.target.value;
+    state.ai.estimatedTokens = Math.max(6, Math.ceil(event.target.value.length / 6));
+    renderAI();
   });
 
   render();

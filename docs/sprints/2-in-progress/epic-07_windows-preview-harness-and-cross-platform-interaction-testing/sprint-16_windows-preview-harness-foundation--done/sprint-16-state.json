@@ -1,0 +1,12 @@
+{
+  "sprint_number": 16,
+  "sprint_file": "docs\\sprints\\2-in-progress\\epic-07_windows-preview-harness-and-cross-platform-interaction-testing\\sprint-16_windows-preview-harness-foundation\\sprint-16_windows-preview-harness-foundation.md",
+  "sprint_title": "Windows desktop or web preview harness foundation for offline interaction testing",
+  "status": "complete",
+  "current_phase": 1,
+  "current_step": "1.1",
+  "started_at": "2026-03-29T17:31:57Z",
+  "workflow_version": "3.0",
+  "completed_steps": [],
+  "completed_at": "2026-03-29T17:36:16.824174-07:00"
+}

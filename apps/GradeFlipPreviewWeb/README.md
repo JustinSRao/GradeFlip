@@ -6,6 +6,7 @@ Purpose:
 
 - exercise offline interactions from a browser on Windows
 - verify deck editing and study behavior without Apple runtimes
+- verify online and AI shell integration states without live service credentials
 - complement shared Swift package tests
 
 Non-goals:

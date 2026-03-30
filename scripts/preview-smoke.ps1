@@ -38,13 +38,17 @@ try {
         throw "Preview HTML did not contain the expected title."
     }
 
-    if ($html.Content -notmatch "Study" -or $html.Content -notmatch "Decks") {
-        throw "Preview HTML did not expose the expected offline tabs."
+    if ($html.Content -notmatch "Study" -or $html.Content -notmatch "Decks" -or $html.Content -notmatch "Online" -or $html.Content -notmatch "AI") {
+        throw "Preview HTML did not expose the expected parity tabs."
     }
 
     $payload = $json.Content | ConvertFrom-Json
     if (-not $payload.decks -or $payload.decks.Count -lt 2) {
         throw "Preview JSON fixture did not expose the expected deck data."
+    }
+
+    if (-not $payload.online -or -not $payload.ai) {
+        throw "Preview JSON fixture did not expose the expected online and AI preview states."
     }
 
     Write-Host "Preview harness smoke test passed."

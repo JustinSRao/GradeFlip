@@ -48,5 +48,42 @@
         }
       ]
     }
-  ]
+  ],
+  "online": {
+    "accountState": "Signed In Preview",
+    "syncStatus": "Sync ready, local-only stub",
+    "subscriptionState": "Online subscription active preview",
+    "backend": "Supabase + PostgreSQL (stubbed)",
+    "socialFeed": [
+      "Avery shared Biology Sprint Review",
+      "Jordan requested your US History deck",
+      "Mika kept a 3-day buddy streak alive"
+    ]
+  },
+  "ai": {
+    "selectedModelId": "gpt-5.4-mini",
+    "mode": "deckGrounded",
+    "prompt": "Quiz me on osmosis and cell respiration.",
+    "estimatedTokens": 12,
+    "tokenBalance": 100,
+    "selectedDeckTitles": [
+      "Biology Sprint Review",
+      "US History"
+    ],
+    "previewResponse": "Deck-grounded preview mode stays constrained to the selected GradeFlip deck fixtures.",
+    "models": [
+      {
+        "id": "gpt-5.4-mini",
+        "displayName": "GPT-5.4 Mini"
+      },
+      {
+        "id": "claude-sonnet-4",
+        "displayName": "Claude Sonnet 4"
+      },
+      {
+        "id": "gemini-2.5-pro",
+        "displayName": "Gemini 2.5 Pro"
+      }
+    ]
+  }
 }
