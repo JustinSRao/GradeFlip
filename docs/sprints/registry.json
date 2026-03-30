@@ -76,13 +76,13 @@
     },
     "8": {
       "title": "iPad adaptive workspace and multi-pane study flows",
-      "status": "planning",
+      "status": "done",
       "epic": 3,
       "type": "fullstack",
       "created": "2026-03-26",
       "started": null,
-      "completed": null,
-      "hours": null
+      "completed": "2026-03-29",
+      "hours": 7.0
     },
     "9": {
       "title": "Mac app layout, themes, dark mode, and accessibility polish",
@@ -181,7 +181,7 @@
       "started": null,
       "completed": null,
       "totalSprints": 3,
-      "completedSprints": 1
+      "completedSprints": 2
     },
     "4": {
       "title": "Online sync and social study",
